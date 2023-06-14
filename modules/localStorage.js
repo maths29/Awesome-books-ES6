@@ -1,6 +1,6 @@
 import { addNewBook } from './addAndRemoveBook.js';
 
-export function loadFromLocalStorage() {
+export const loadFromLocalStorage = () => {
   let Books;
 
   if (localStorage.getItem('BooksInfo')) {
@@ -9,7 +9,7 @@ export function loadFromLocalStorage() {
     Books = [];
   }
   return Books;
-}
+};
 
 export const displayBooksOnPage = () => {
   const Books = loadFromLocalStorage();
@@ -19,7 +19,7 @@ export const displayBooksOnPage = () => {
   });
 };
 
-export function removeFromLocalStorage(element) {
+export const removeFromLocalStorage = (element) => {
   let k = 0;
   const Books = loadFromLocalStorage();
   const idd = element.parentElement.id;
@@ -32,4 +32,4 @@ export function removeFromLocalStorage(element) {
   }
   Books.splice(k, 1);
   localStorage.setItem('BooksInfo', JSON.stringify(Books));
-}
+};

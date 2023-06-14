@@ -4,32 +4,32 @@ const formInfo = document.querySelector('form');
 const contact = document.querySelector('.contact-section');
 const homeScreen = document.querySelector('.home-welcome');
 
-export function homeDisplay() {
+export const homeDisplay = () => {
   BooksContainer.classList.remove('active');
   bookslisth2.classList.remove('active');
   formInfo.classList.remove('active');
   contact.classList.remove('active');
   homeScreen.classList.remove('remove-content');
-}
+};
 
-export function displayBookList() {
+export const displayBookList = () => {
   BooksContainer.classList.add('active');
   bookslisth2.classList.add('active');
   formInfo.classList.remove('active');
   contact.classList.remove('active');
   homeScreen.classList.add('remove-content');
-}
-export function displayFormSection() {
+};
+export const displayFormSection = () => {
   bookslisth2.classList.remove('active');
   formInfo.classList.add('active');
   BooksContainer.classList.remove('active');
   contact.classList.remove('active');
   homeScreen.classList.add('remove-content');
-}
-export function displayContactSection() {
+};
+export const displayContactSection = () => {
   contact.classList.add('active');
   bookslisth2.classList.remove('active');
   BooksContainer.classList.remove('active');
   formInfo.classList.remove('active');
   homeScreen.classList.add('remove-content');
-}
+};

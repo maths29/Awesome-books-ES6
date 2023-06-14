@@ -16,8 +16,8 @@ export const addNewBook = (book) => {
   BooksContainer.appendChild(booksInfo);
 };
 
-export function removeBookFromPage(target) {
+export const removeBookFromPage = (target) => {
   if (target.classList.contains('remove-this-book')) {
     target.parentElement.remove();
   }
-}
+};
